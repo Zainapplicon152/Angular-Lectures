@@ -41,12 +41,47 @@
 
 {{currentVal}}
 -->
-<h1>Property Binding</h1>
+<!--<h1>Property Binding</h1>
 
 <input type="text" disabled="{{disableButton}}" [value]="name"> <br><br>
 
 <input type="text" [disabled]="disableButton" value="{{name}}"> <br><br>
 
-<button (click)="enablebutton()">enable</button>
+<button (click)="enablebutton()">enable</button>-->
+
+<h1>Condition statement</h1>
+<h1 *ngIf="show == 'yes'; then ifblock else elseblock">
+</h1>
+
+<ng-template #ifblock>if block</ng-template>
+<ng-template #elseblock>else block</ng-template><br>
+
+<ng-template [ngIf]="color == 'red'">red color</ng-template>
+<ng-template [ngIf]="color == 'green'">green color</ng-template>
+<ng-template [ngIf]="color == 'blue'">blue color</ng-template>
+
+<h1>Switch statement</h1>
+<div [ngSwitch]="color">
+  <h1 style="color: red" *ngSwitchCase="'red'">Red</h1>
+  <h1 style="color: green" *ngSwitchCase="'green'">Green</h1>
+  <h1 style="color: yellow" *ngSwitchCase="'yellow'">Yellow</h1>
+  <h1 style="color: blue" *ngSwitchCase="'blue'">Blue</h1>
+</div>
+
+<h1>For Loop</h1>
+
+<table [border]="1">
+  <tr>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Email</td>
+  </tr>
+  <tr *ngFor="let u of users">
+    <td>{{u.name}}</td>
+    <td>{{u.age}}</td>
+    <td>{{u.email}}</td>
+  </tr>
+
+</table>
 
 
