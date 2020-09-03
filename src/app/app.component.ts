@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -32,10 +32,10 @@ export class AppComponent {
       name: 'zain4',
       age: 22,
       email: 'zain@gmail.com',
-    }
+    },
   ];
 
-  obj = {name: 'zain', age: 22};
+  obj = { name: 'zain', age: 22 };
   arr = ['zain', '22', 'love'];
 
   // tslint:disable-next-line:typedef
@@ -60,5 +60,9 @@ export class AppComponent {
 
   enablebutton() {
     this.disableButton = false;
+  }
+
+  getUserform(value) {
+    console.warn(value);
   }
 }

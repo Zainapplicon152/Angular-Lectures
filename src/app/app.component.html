@@ -1,12 +1,12 @@
-<!--
-<h1>Hello Zain</h1>
-{{ title}}
-<h1>my name is : {{name}}</h1>
-<p>{{obj.name}} , {{obj.age}}</p>
-<p>{{arr.length}} , {{arr}} , {{arr[2]}}</p>
+<app-header></app-header>
+<!-- <h1>Hello Zain</h1>
+    {{ title}}
+    <h1>my name is : {{name}}</h1>
+    <p>{{obj.name}} , {{obj.age}}</p>
+    <p>{{arr.length}} , {{arr}} , {{arr[2]}}</p>
 
-<p>function : {{getName()}}</p>
--->
+    <p>function : {{getName()}}</p>
+    -->
 <!--<app-user-list></app-user-list>
 <app-login></app-login>
 <app-signup></app-signup>
@@ -49,7 +49,7 @@
 
 <button (click)="enablebutton()">enable</button>-->
 
-<h1>Condition statement</h1>
+<!-- <h1>Condition statement</h1>
 <h1 *ngIf="show == 'yes'; then ifblock else elseblock">
 </h1>
 
@@ -82,6 +82,17 @@
     <td>{{u.email}}</td>
   </tr>
 
-</table>
+</table> -->
+<div class="form_center">
+    <h1>Forms in Angular</h1>
 
+    <form #userform="ngForm" (ngSubmit)="getUserform(userform.value)">
+        <input type="text" ngModel placeholder="enter name" name="username"><br><br>
+        <input type="text" ngModel placeholder="enter address" name="address"><br><br>
+        <input type="text" ngModel placeholder="enter age" name="age"><br><br>
+        <input type="password" ngModel placeholder="enter password" name="password"><br><br>
+        <button type="submit">Get user value</button>
+    </form>
+</div>
 
+<app-footer></app-footer>
