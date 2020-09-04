@@ -1,9 +1,29 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  styles: [`
+    .star {
+      position: relative;
+      display: inline-block;
+      font-size: 3rem;
+      color: #d3d3d3;
+    }
+
+    .full {
+      color: red;
+    }
+
+    .half {
+      position: absolute;
+      display: inline-block;
+      overflow: hidden;
+      color: red;
+    }
+  `],
 })
 export class AppComponent {
   title = 'Angular';
@@ -12,6 +32,8 @@ export class AppComponent {
   disableButton = true;
   show = 'yes';
   color = 'green';
+  err = true;
+  currentRate = 3.14;
   users = [
     {
       name: 'zain',
@@ -35,7 +57,7 @@ export class AppComponent {
     },
   ];
 
-  obj = { name: 'zain', age: 22 };
+  obj = {name: 'zain', age: 22};
   arr = ['zain', '22', 'love'];
 
   // tslint:disable-next-line:typedef
@@ -64,5 +86,9 @@ export class AppComponent {
 
   getUserform(value) {
     console.warn(value);
+  }
+
+  changeColor() {
+    this.color = 'red';
   }
 }

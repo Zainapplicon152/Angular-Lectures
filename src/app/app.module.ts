@@ -11,10 +11,15 @@ import { UsersModule } from './users/users.module';
 import {FormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [AppComponent, UserListComponent, HeaderComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, UsersModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, UsersModule, FormsModule, NgbModule, BrowserAnimationsModule, MatButtonModule, MatIconModule, MatDividerModule],
   providers: [],
   bootstrap: [AppComponent],
 })
