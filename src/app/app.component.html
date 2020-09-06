@@ -115,6 +115,7 @@
 <!--<pre>Rate: <b>{{currentRate}}</b></pre>-->
 <!--<button class="btn btn-sm btn-outline-primary mr-2" (click)="currentRate = 1.35">1.35</button>-->
 <!--<button class="btn btn-sm btn-outline-primary mr-2" (click)="currentRate = 4.72">4.72</button>-->
+<!--
 <h2>Material UI</h2>
 <section>
   <div class="example-label">Basic</div>
@@ -242,5 +243,12 @@
     </div>
   </div>
 </section>
+-->
+<!--h1>Pass data from parent to child component</h1>
+<app-child [hero]="data"></app-child> &lt;!&ndash;data transfer to child component&ndash;&gt;-->
 
+<h1>Pass data from child to parent component</h1>
+<app-child (parentComponent)="parentComponent($event)"></app-child>
+
+{{data.name}}
 <app-footer></app-footer>

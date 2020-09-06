@@ -34,6 +34,10 @@ export class AppComponent {
   color = 'green';
   err = true;
   currentRate = 3.14;
+  data = {
+    name: 'zain',
+    age: 22
+  };
   users = [
     {
       name: 'zain',
@@ -90,5 +94,9 @@ export class AppComponent {
 
   changeColor() {
     this.color = 'red';
+  }
+
+  parentComponent(data) {
+    console.warn(data);
   }
 }
