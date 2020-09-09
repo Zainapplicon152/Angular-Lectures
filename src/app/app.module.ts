@@ -17,9 +17,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { ChildComponent } from './child/child.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CustomDirectiveDirective } from './custom-directive.directive';
 
 @NgModule({
-  declarations: [AppComponent, UserListComponent, HeaderComponent, FooterComponent, ChildComponent],
+  declarations: [AppComponent, UserListComponent, HeaderComponent, FooterComponent, ChildComponent, PageNotFoundComponent, CustomDirectiveDirective],
   imports: [BrowserModule, AppRoutingModule, UsersModule, FormsModule, NgbModule, BrowserAnimationsModule, MatButtonModule, MatIconModule, MatDividerModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {UsersDataService} from './users-data.service';
 
 
 @Component({
@@ -34,6 +35,7 @@ export class AppComponent {
   color = 'green';
   err = true;
   currentRate = 3.14;
+  myname = '';
   data = {
     name: 'zain',
     age: 22
@@ -63,6 +65,12 @@ export class AppComponent {
 
   obj = {name: 'zain', age: 22};
   arr = ['zain', '22', 'love'];
+
+  constructor(private user: UsersDataService) {
+    console.warn(this.user.getdata());
+    const datas = this.user.getdata();
+    this.myname = datas.name;
+  }
 
   // tslint:disable-next-line:typedef
   getName() {
