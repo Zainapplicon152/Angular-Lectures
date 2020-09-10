@@ -271,5 +271,21 @@
 <h4>Simple</h4>
 <h4 appCustomDirective>Custom</h4>
 <router-outlet></router-outlet>-->
-{{myname}}
+<!--{{myname}}-->
+<h1>Api call in angular</h1>
+<table datatable class="row-border hover">
+  <tr>
+    <td>Id</td>
+    <td>UserID</td>
+    <td>Title</td>
+    <td>Body</td>
+  </tr>
+  <tr *ngFor="let post of posts">
+    <td>{{post.id}}</td>
+    <td>{{post.userId}}</td>
+    <td>{{post.title}}</td>
+    <td>{{post.body}}</td>
+  </tr>
+
+</table>
 <app-footer></app-footer>

@@ -19,10 +19,12 @@ import {MatDividerModule} from '@angular/material/divider';
 import { ChildComponent } from './child/child.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
+import {HttpClientModule} from '@angular/common/http';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [AppComponent, UserListComponent, HeaderComponent, FooterComponent, ChildComponent, PageNotFoundComponent, CustomDirectiveDirective],
-  imports: [BrowserModule, AppRoutingModule, UsersModule, FormsModule, NgbModule, BrowserAnimationsModule, MatButtonModule, MatIconModule, MatDividerModule],
+  imports: [BrowserModule, AppRoutingModule, UsersModule, FormsModule, NgbModule, BrowserAnimationsModule, MatButtonModule, MatIconModule, MatDividerModule, HttpClientModule, DataTablesModule],
   providers: [],
   bootstrap: [AppComponent],
 })

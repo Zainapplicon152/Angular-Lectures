@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {UsersDataService} from './users-data.service';
+import {PostDataService} from './post-data.service';
 
 
 @Component({
@@ -36,6 +37,7 @@ export class AppComponent {
   err = true;
   currentRate = 3.14;
   myname = '';
+  posts = [];
   data = {
     name: 'zain',
     age: 22
@@ -66,10 +68,15 @@ export class AppComponent {
   obj = {name: 'zain', age: 22};
   arr = ['zain', '22', 'love'];
 
-  constructor(private user: UsersDataService) {
+  constructor(private user: UsersDataService, private post: PostDataService) {
     console.warn(this.user.getdata());
     const datas = this.user.getdata();
     this.myname = datas.name;
+
+    this.post.getPostData().subscribe(data => {
+      console.warn(data);
+      this.posts = data;
+    });
   }
 
   // tslint:disable-next-line:typedef
